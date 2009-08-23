@@ -221,6 +221,14 @@ LOCAL_SRC_FILES+=\
 LOCAL_MODULE:=libebl_mips
 endif
 
+ifeq ($(TARGET_ARCH),ppc)
+LOCAL_SRC_FILES+=\
+        libebl/ppc_destr.c \
+        libebl/ppc_init.c \
+        libebl/ppc_symbol.c
+LOCAL_MODULE:=libebl_ppc
+endif
+
 ifeq ($(HOST_OS),linux)
 endif
 ifeq ($(HOST_OS),darwin)
